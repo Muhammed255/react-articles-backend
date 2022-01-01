@@ -5,6 +5,7 @@ import express from "express";
 import mongoose from "mongoose";
 import compression from "compression";
 import cors from "cors";
+import HttpError from './models/http-error.js';
 
 import dotenv from "dotenv";
 
