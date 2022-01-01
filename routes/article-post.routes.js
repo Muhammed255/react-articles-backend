@@ -44,6 +44,8 @@ articlePostRoutes.post(
 
 articlePostRoutes.get("/get-articles", articlePostController.getArticles);
 
+articlePostRoutes.get("/:postId", articlePostController.findArticle)
+
 articlePostRoutes.get("/user/:userId", articlePostController.getUserArticles);
 
 
@@ -66,6 +68,5 @@ articlePostRoutes.get(
 
 articlePostRoutes
   .route("/:postId")
-  .get(articlePostController.findArticle)
   .put(checkAuth, articlePostController.updateArticle)
   .delete(checkAuth, articlePostController.deleteArticle);
