@@ -17,7 +17,7 @@ import { tagRoutes } from "./routes/tag.routes.js";
 
 const app = express();
 
-const port = 5000;
+const port = process.env.PORT || 8888;
 
 app.use(compression());
 
